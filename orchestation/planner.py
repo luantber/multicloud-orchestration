@@ -1,9 +1,20 @@
 from python_terraform import *
+from orchestation.Instancia import Instancia
 
-t = Terraform(working_dir='tf/',terraform_bin_path='/home/luisbch/Documentos/cloud/aws/terraform/terraform')
-t.init()
-return_code, stdout, stderr = t.plan()
+def create_plan(specification):
+    id_s = "url"
+    id = 0
+    for nodo in specification:
+        instancia = Instancia(nodo,id_s+str(id))
+        instancia.create_tf()
+        id+=1
 
-#print(return_code)
-print(stdout)
-print(stderr)
+
+def execute_plan():
+    t = Terraform(working_dir='orchestation/tf/',terraform_bin_path='/home/luisbch/Documentos/cloud/aws/terraform/terraform')
+    t.init()
+    return_code, stdout, stderr = t.plan()
+
+    #print(return_code)
+    print(stdout)
+    print(stderr)

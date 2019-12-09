@@ -1,11 +1,11 @@
 import json
 from drivers.awsDriver import awsDriver
 
-def match(file_req):
+def match(file_req,use_cache=False):
     with open(file_req) as json_file:
         data = json.load(json_file)
         # print(data)
-        lista = awsDriver().discover_types()
+        lista = awsDriver().discover_types(use_cache=use_cache)
 
         resultado_final = []
         resultado_query = []
