@@ -1,0 +1,3 @@
+boto3==1.10.34
+python-terraform
+python-constraint

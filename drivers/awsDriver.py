@@ -1,6 +1,6 @@
 import boto3
 from pprint import pprint
-from instancia import  TipoInstancia
+from drivers.TipoInstancia import TipoInstancia
 
 
 class awsDriver():
@@ -20,5 +20,5 @@ class awsDriver():
         return lista
 
 
-for x in awsDriver().discover_types():
-    x.describe()
+# for x in awsDriver().discover_types():
+#     x.describe()
