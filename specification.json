@@ -3,5 +3,12 @@
   "all":{
       "cpu":1,
       "ram":1024
-  }
+  },
+  "n1":{
+    "acciones":"apt install apache2"
+  },
+  "n2":{
+    "acciones":"apt install apache2"
+  }  
+  
 }

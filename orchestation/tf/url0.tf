@@ -1,4 +1,7 @@
  resource "aws_instance" "url0" {
- ami= "ami-2757f631"
-instance_type = "t2.micro"
+ ami= "ami-04b9e92b5572fa0d1"
+instance_type = "t2.micro" 
+provisioner "local-exec" { 
+command = "sudo apt install apache2"
+}
 }

@@ -13,7 +13,8 @@ def create_plan(specification):
 def execute_plan():
     t = Terraform(working_dir='orchestation/tf/',terraform_bin_path='/home/luisbch/Documentos/cloud/aws/terraform/terraform')
     t.init()
-    return_code, stdout, stderr = t.plan()
+    #t.plan()
+    return_code, stdout, stderr = t.apply(skip_plan=True)
 
     #print(return_code)
     print(stdout)

@@ -1,9 +1,9 @@
 from matchmaking.Match import match 
-from orchestation.planner import create_plan,execute_plan
+import orchestation.planner as planner
 
 spec = "specification.json"
 match_spec = match(spec,use_cache=True)
-create_plan(match_spec)
 
-execute_plan()
+planner.create_plan(match_spec)
+planner.execute_plan()
 
