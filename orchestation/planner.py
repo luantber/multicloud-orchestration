@@ -15,7 +15,7 @@ def execute_plan(debug=False):
     if debug:
         return_code, stdout, stderr = t.plan()
     else:
-        return_code, stdout, stderr = t.apply(skip_plan=True)
+        return_code, stdout, stderr = t.apply(skip_plan=True,capture_output=False )
 
     print(return_code)
     print(stdout)
