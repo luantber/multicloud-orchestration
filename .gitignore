@@ -1,4 +1,4 @@
 hidden
 __pycache__/
 .terraform
-.pkl
+*.pem

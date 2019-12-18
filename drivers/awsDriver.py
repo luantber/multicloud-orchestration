@@ -14,11 +14,11 @@ class awsDriver():
             #sin cache
             ec2 = boto3.client('ec2')
             tipos = ec2.describe_instance_types()
+            
+            
             with open("drivers/aws_cache.pkl","wb+") as pkl:
                 pickle.dump(tipos,pkl)
             
-
-
 
         # print(tipos.keys())
         # pprint(tipos['InstanceTypes'][0])
