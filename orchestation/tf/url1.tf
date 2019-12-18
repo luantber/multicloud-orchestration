@@ -18,3 +18,6 @@ inline = [
 output "url1_ip"{
 	                value = "${aws_instance.url1.public_ip}"
                 }
+
+
+                

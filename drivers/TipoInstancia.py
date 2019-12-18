@@ -10,3 +10,6 @@ class TipoInstancia():
         cadena = "name: " + self.name + "\ncpu:" + str(self.cpu) + "\nram:" + str(self.ram) + "\nprice: " + str(self.price) 
         cadena += "\nfree:"+ str(self.free)
         print(cadena+"\n")
+
+
+        

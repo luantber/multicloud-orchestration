@@ -2,3 +2,4 @@ hidden
 __pycache__/
 .terraform
 *.pem
+gcp.json
